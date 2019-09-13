@@ -1,28 +1,36 @@
+{% load staticfiles %}
 <HTML>
 
 <HEAD>
     <TITLE>Eric's World of Waffles</TITLE>
     <LINK REL="stylesheet" TYPE="text/css" HREF="sheet1.css" TITLE="Default">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </HEAD>
 
 <BODY>
-    <div class="row">
-        <div class="col-xs-4">
-            <a href="{% url 'about' %}">Click to go to about</a>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-4">
+                <a href="{% url 'about' %}">Click to go to about</a>
+
+            </div>
+            <div class="col-xs-8">
+                <H1 class="active">Waffles!</H1>
+                <form action="{% url 'count' %}">
+                    <textarea cols="40" rows="5" name="fulltext"></textarea>
+                    <br>
+                    <input type="submit" value="Count!"></form>
+                </form>
+
+            </div>
 
         </div>
-        <div class="col-xs-8">
-            <H1 class="active">Waffles!</H1>
-            <form action="{% url 'count' %}">
-                <textarea cols="40" rows="5" name="fulltext"></textarea>
-                <br>
-                <input type="submit" value="Count!"></form>
-            </form>
-
-        </div>
-
     </div>
 </BODY>
 
