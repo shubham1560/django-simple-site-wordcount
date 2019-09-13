@@ -14,18 +14,43 @@
 </HEAD>
 
 <BODY>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                          PortFolio!
+                            <!-- <img src="{% static 'logo.jpg'%}" length="30px" height="30px" /> &nbsp;&nbsp;Product Hunt -->
+                        </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                       <span class="navbar-toggler-icon"></span>
+                    </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav mr-auto">
+                    </ul>
+
+                    <div class="form-inline my-2 my-lg-0 pull-right">
+                        <button class="btn btn-outline-success my-2 my-sm-0" style="color: white; border:1px solid white" type="submit"><a style="color:white" href="{% url 'about' %}">About</a></button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+
+
+
     <div class="container">
         <div class="row">
-            <div class="col-xs-4">
-                <a href="{% url 'about' %}">Click to go to about</a>
 
-            </div>
             <div class="col-xs-8">
-                <H1 class="active">Waffles!</H1>
+                <br><br>
+                <H1 class="active">Word Count</H1>
                 <form action="{% url 'count' %}">
-                    <textarea cols="40" rows="5" name="fulltext"></textarea>
-                    <br>
-                    <input type="submit" value="Count!"></form>
+                    <textarea cols="40" rows="10" name="fulltext"></textarea>
+                    <br><br>
+                    <input class="btn btn-primary" type="submit" value="Count!"></form>
                 </form>
 
             </div>
